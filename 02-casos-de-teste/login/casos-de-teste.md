@@ -68,7 +68,15 @@ O sistema deve impedir o acesso e apresentar a mensagem:
 
 `Email ou senha inválidos`
 
-**Status:** Não executado
+**Resultado:** FALHOU
+
+**Resultado obtido:**
+
+O sistema apresentou a mensagem:
+
+`Usuário não encontrado. Verifique o email ou cadastre-se.`
+
+**Bug:** BUG-001
 
 ---
 
@@ -318,8 +326,8 @@ O sistema deve tratar os espaços conforme a regra definida para o campo de e-ma
 
 | ID | Cenário | Tipo | Status |
 |---|---|---|---|
-| CT-LOGIN-001 | Login com credenciais válidas | Positivo | Não executado |
-| CT-LOGIN-002 | Login com senha inválida | Negativo | Não executado |
+| CT-LOGIN-001 | Login com credenciais válidas | Positivo | ✅ PASSOU |
+| CT-LOGIN-002 | Login com senha inválida | Negativo | ❌ FALHOU — BUG-001 |
 | CT-LOGIN-003 | Login com e-mail inválido | Negativo | Não executado |
 | CT-LOGIN-004 | Login sem e-mail | Negativo | Não executado |
 | CT-LOGIN-005 | Login sem senha | Negativo | Não executado |
