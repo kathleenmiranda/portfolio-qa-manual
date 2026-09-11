@@ -19,7 +19,7 @@ Validar o comportamento da funcionalidade de Login, considerando os fluxos de su
 ### CT-LOGIN-001 — Login com credenciais válidas
 
 **Objetivo:**  
-Validar o acesso à aplicação utilizando credenciais válidas.
+Validar o acesso à aplicação com credenciais válidas.
 
 **Pré-condição:**  
 Possuir credenciais válidas.
@@ -30,7 +30,7 @@ Possuir credenciais válidas.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Informar um e-mail válido.
 3. Informar uma senha válida.
 4. Clicar no botão **Entrar**.
@@ -57,7 +57,7 @@ Possuir um e-mail de usuário cadastrado.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Informar um e-mail cadastrado.
 3. Informar uma senha incorreta.
 4. Clicar em **Entrar**.
@@ -91,7 +91,7 @@ Validar a validação do formato do e-mail informado.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Informar um e-mail em formato inválido.
 3. Informar uma senha válida.
 4. Clicar em **Entrar**.
@@ -115,7 +115,7 @@ O sistema apresentou a mensagem:
 ### CT-LOGIN-004 — Login sem informar o e-mail
 
 **Objetivo:**  
-Validar o comportamento do sistema quando o campo de e-mail não é preenchido.
+Validar o comportamento do sistema quando o campo de e-mail não for preenchido.
 
 **Massa de teste:**
 - E-mail: vazio
@@ -123,7 +123,7 @@ Validar o comportamento do sistema quando o campo de e-mail não é preenchido.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Não preencher o campo de e-mail.
 3. Informar uma senha válida.
 4. Clicar em **Entrar**.
@@ -157,7 +157,7 @@ Validar o comportamento do sistema quando o campo de senha não é preenchido.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Informar um e-mail válido.
 3. Não preencher o campo de senha.
 4. Clicar em **Entrar**.
@@ -183,7 +183,7 @@ Embora apenas o campo de senha tenha sido deixado vazio, a aplicação exibe uma
 ### CT-LOGIN-006 — Login sem preencher os campos
 
 **Objetivo:**  
-Validar o comportamento do sistema quando nenhum campo é preenchido.
+Validar o comportamento do sistema quando nenhum campo estiver preenchido.
 
 **Massa de teste:**
 
@@ -192,7 +192,7 @@ Validar o comportamento do sistema quando nenhum campo é preenchido.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Não preencher nenhum campo.
 3. Clicar em **Entrar**.
 
@@ -217,7 +217,7 @@ Validar a regra de tamanho mínimo da senha.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Informar um e-mail válido.
 3. Informar uma senha com 5 caracteres.
 4. Clicar em **Entrar**.
@@ -235,7 +235,7 @@ O sistema deve impedir o login e apresentar a mensagem:
 ### CT-LOGIN-008 — Login com usuário não cadastrado
 
 **Objetivo:**  
-Validar o comportamento do sistema quando é informado um e-mail que não pertence a um usuário cadastrado.
+Validar o comportamento do sistema quando for informado um e-mail que não pertence a um usuário cadastrado.
 
 **Massa de teste:**
 - E-mail: `usuario.inexistente@qatest.com`
@@ -243,7 +243,7 @@ Validar o comportamento do sistema quando é informado um e-mail que não perten
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Informar um e-mail não cadastrado.
 3. Informar uma senha válida.
 4. Clicar em **Entrar**.
@@ -269,14 +269,14 @@ Validar o comportamento da aplicação para um e-mail com domínio incompleto ou
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Informar um e-mail com formato inválido.
 3. Informar uma senha válida.
 4. Clicar em **Entrar**.
 
 **Resultado esperado:**
 
-O sistema deve impedir o login e apresentar a mensagem de formato de e-mail inválido.
+O sistema deve impedir o login e apresentar a mensagem em formato de e-mail inválido.
 
 **Status:** Não executado
 
@@ -289,7 +289,7 @@ Validar o redirecionamento para a tela de cadastro.
 
 **Passos:**
 
-1. Acessar a tela de Login.
+1. Acessar a tela de login.
 2. Clicar no link **Cadastre-se**.
 
 **Resultado esperado:**
@@ -303,7 +303,7 @@ O sistema deve redirecionar o usuário para a tela de cadastro.
 ### CT-LOGIN-011 — Login utilizando e-mail com letras maiúsculas
 
 **Objetivo:**  
-Validar o comportamento do sistema quando o e-mail é informado utilizando letras maiúsculas.
+Validar o comportamento do sistema quando o e-mail for informado em letras maiúsculas.
 
 **Massa de teste:**
 - E-mail: `ADMIN@QATEST.COM`
@@ -311,8 +311,8 @@ Validar o comportamento do sistema quando o e-mail é informado utilizando letra
 
 **Passos:**
 
-1. Acessar a tela de Login.
-2. Informar o e-mail utilizando letras maiúsculas.
+1. Acessar a tela de login.
+2. Informar o e-mail em letras maiúsculas.
 3. Informar uma senha válida.
 4. Clicar em **Entrar**.
 
@@ -327,7 +327,7 @@ O sistema deve apresentar o comportamento definido para o tratamento de letras m
 ### CT-LOGIN-012 — Login com espaços no e-mail
 
 **Objetivo:**  
-Validar o comportamento da aplicação quando o e-mail contém espaços antes ou depois do valor.
+Validar o comportamento da aplicação quando o e-mail contiver espaços antes ou depois do valor.
 
 **Massa de teste:**
 - E-mail: ` admin@qatest.com `
@@ -335,8 +335,8 @@ Validar o comportamento da aplicação quando o e-mail contém espaços antes ou
 
 **Passos:**
 
-1. Acessar a tela de Login.
-2. Informar um e-mail contendo espaços antes e/ou depois do endereço.
+1. Acessar a tela de login.
+2. Informar um e-mail que contenha espaços antes e/ou depois do endereço.
 3. Informar uma senha válida.
 4. Clicar em **Entrar**.
 
@@ -358,12 +358,12 @@ O sistema deve tratar os espaços conforme a regra definida para o campo de e-ma
 | CT-LOGIN-004 | Login sem e-mail | Negativo | ⚠️ PASSOU* |
 | CT-LOGIN-005 | Login sem senha | Negativo | ⚠️ PASSOU* |
 | CT-LOGIN-006 | Login sem campos | Negativo | ✅ PASSOU |
-| CT-LOGIN-007 | Senha abaixo do mínimo | Limite | Não executado |
-| CT-LOGIN-008 | Usuário não cadastrado | Negativo | Não executado |
-| CT-LOGIN-009 | Domínio de e-mail inválido | Negativo | Não executado |
-| CT-LOGIN-010 | Acesso ao cadastro | Navegação | Não executado |
-| CT-LOGIN-011 | E-mail em letras maiúsculas | Exploratório | Não executado |
-| CT-LOGIN-012 | Espaços no e-mail | Exploratório | Não executado |
+| CT-LOGIN-007 | Senha abaixo do mínimo | Limite | ✅ PASSOU |
+| CT-LOGIN-008 | Usuário não cadastrado | Negativo | ✅ PASSOU |
+| CT-LOGIN-009 | Domínio de e-mail inválido | Negativo | ✅ PASSOU |
+| CT-LOGIN-010 | Acesso ao cadastro | Navegação | ✅ PASSOU |
+| CT-LOGIN-011 | E-mail em letras maiúsculas | Exploratório | ❌ NÃO PASSOU |
+| CT-LOGIN-012 | Espaços no e-mail | Exploratório | ❌ NÃO PASSOU |
 
 ---
 
