@@ -39,7 +39,7 @@ Possuir credenciais válidas.
 
 O sistema deve autenticar o usuário e permitir o acesso à aplicação.
 
-**Status:** Não executado
+**Status:** PASSOU
 
 ---
 
@@ -102,7 +102,7 @@ O sistema deve impedir o login e apresentar a mensagem:
 
 `Formato de email inválido. Use: nome@dominio.com`
 
-**Status:** Não executado**Resultado:** PASSOU
+**Status:** PASSOU
 
 **Resultado obtido:**
 
@@ -132,7 +132,7 @@ Validar o comportamento do sistema quando o campo de e-mail não for preenchido.
 
 O sistema deve informar que o campo de e-mail é obrigatório.
 
-**Resultado:** PASSOU
+**Status:** PASSOU
 
 **Resultado obtido:**
 
@@ -166,7 +166,7 @@ Validar o comportamento do sistema quando o campo de senha não é preenchido.
 
 O sistema deve informar que o campo de senha é obrigatório.
 
-**Resultado:** PASSOU
+**Status:** PASSOU
 
 **Resultado obtido:**
 
@@ -202,7 +202,13 @@ O sistema deve apresentar a mensagem:
 
 `Email e senha são obrigatórios`
 
-**Status:** Não executado
+**Status:** PASSOU
+
+**Resultado obtido:**
+
+O sistema apresentou a mensagem:
+
+`Email e senha são obrigatórios`
 
 ---
 
@@ -228,7 +234,7 @@ O sistema deve impedir o login e apresentar a mensagem:
 
 `Senha deve ter pelo menos 6 caracteres`
 
-**Status:** Não executado
+**Status:** PASSOU
 
 ---
 
@@ -254,14 +260,14 @@ O sistema deve impedir o acesso e apresentar a mensagem:
 
 `Usuário não encontrado. Verifique o email ou cadastre-se.`
 
-**Status:** Não executado
+**Status:** PASSOU
 
 ---
 
-### CT-LOGIN-009 — E-mail com domínio inválido
+### CT-LOGIN-009 — E-mail com formato inválido
 
 **Objetivo:**  
-Validar o comportamento da aplicação para um e-mail com domínio incompleto ou inválido.
+Validar o comportamento da aplicação para um e-mail que não possui um domínio válido.
 
 **Massa de teste:**
 - E-mail: `usuario@`
@@ -278,7 +284,7 @@ Validar o comportamento da aplicação para um e-mail com domínio incompleto ou
 
 O sistema deve impedir o login e apresentar a mensagem em formato de e-mail inválido.
 
-**Status:** Não executado
+**Status:** PASSOU
 
 ---
 
@@ -296,7 +302,7 @@ Validar o redirecionamento para a tela de cadastro.
 
 O sistema deve redirecionar o usuário para a tela de cadastro.
 
-**Status:** Não executado
+**Status:** PASSOU
 
 ---
 
@@ -318,9 +324,21 @@ Validar o comportamento do sistema quando o e-mail for informado em letras maiú
 
 **Resultado esperado:**
 
-O sistema deve apresentar o comportamento definido para o tratamento de letras maiúsculas no e-mail.
+**Resultado esperado:**
 
-**Status:** Não executado
+O sistema deve tratar o endereço de e-mail de acordo com a regra definida pela aplicação, não devendo impedir o acesso exclusivamente pela utilização de letras maiúsculas no endereço.
+
+**Status:** NÃO PASSOU
+
+**Resultado obtido:**
+
+O sistema apresentou a mensagem:
+
+`Usuário não encontrado. Verifique o email ou cadastre-se.`
+
+**Observação:**
+
+O usuário cadastrado com o endereço `admin@qatest.com` não foi reconhecido quando o mesmo endereço foi informado como `ADMIN@QATEST.COM`.
 
 ---
 
@@ -342,9 +360,19 @@ Validar o comportamento da aplicação quando o e-mail contiver espaços antes o
 
 **Resultado esperado:**
 
-O sistema deve tratar os espaços conforme a regra definida para o campo de e-mail.
+O sistema deve tratar espaços em branco no início ou no final do endereço de e-mail conforme a regra definida para o campo, evitando que espaços excedentes impeçam a autenticação de um endereço válido.
 
-**Status:** Não executado
+**Status:** NÃO PASSOU
+
+**Resultado obtido:**
+
+O sistema apresentou a mensagem:
+
+`Usuário não encontrado. Verifique o email ou cadastre-se.`
+
+**Observação:**
+
+O sistema não realizou o tratamento dos espaços antes e depois do endereço de e-mail, resultando na não identificação do usuário cadastrado.
 
 ---
 
@@ -355,8 +383,8 @@ O sistema deve tratar os espaços conforme a regra definida para o campo de e-ma
 | CT-LOGIN-001 | Login com credenciais válidas | Positivo | ✅ PASSOU |
 | CT-LOGIN-002 | Login com senha inválida | Negativo | ❌ FALHOU — BUG-001  |
 | CT-LOGIN-003 | Login com e-mail inválido | Negativo | ✅ PASSOU  |
-| CT-LOGIN-004 | Login sem e-mail | Negativo | ⚠️ PASSOU* |
-| CT-LOGIN-005 | Login sem senha | Negativo | ⚠️ PASSOU* |
+| CT-LOGIN-004 | Login sem e-mail | Negativo | ✅ PASSOU* |
+| CT-LOGIN-005 | Login sem senha | Negativo | ✅ PASSOU*|
 | CT-LOGIN-006 | Login sem campos | Negativo | ✅ PASSOU |
 | CT-LOGIN-007 | Senha abaixo do mínimo | Limite | ✅ PASSOU |
 | CT-LOGIN-008 | Usuário não cadastrado | Negativo | ✅ PASSOU |
@@ -372,3 +400,5 @@ O sistema deve tratar os espaços conforme a regra definida para o campo de e-ma
 Os casos de teste poderão ser atualizados durante a execução caso sejam identificados novos comportamentos, regras ou cenários relevantes.
 
 Novos casos de teste identificados durante testes exploratórios deverão ser documentados e adicionados ao conjunto de testes.
+
+\* Os CT-LOGIN-004 e CT-LOGIN-005 foram considerados aprovados porque a aplicação impediu o login e apresentou uma mensagem de obrigatoriedade. Entretanto, foi observada a utilização de uma mensagem genérica para ambos os cenários.
