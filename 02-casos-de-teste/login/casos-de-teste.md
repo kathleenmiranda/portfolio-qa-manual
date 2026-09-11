@@ -126,7 +126,17 @@ Validar o comportamento do sistema quando o campo de e-mail não é preenchido.
 
 O sistema deve informar que o campo de e-mail é obrigatório.
 
-**Status:** Não executado
+**Resultado:** PASSOU
+
+**Resultado obtido:**
+
+O sistema apresentou a mensagem:
+
+`Email e senha são obrigatórios`
+
+**Observação:**
+
+Embora apenas o campo de e-mail tenha sido deixado vazio, a aplicação exibe uma mensagem genérica informando que ambos os campos são obrigatórios.
 
 ---
 
@@ -150,7 +160,17 @@ Validar o comportamento do sistema quando o campo de senha não é preenchido.
 
 O sistema deve informar que o campo de senha é obrigatório.
 
-**Status:** Não executado
+**Resultado:** PASSOU
+
+**Resultado obtido:**
+
+O sistema apresentou a mensagem:
+
+`Email e senha são obrigatórios`
+
+**Observação:**
+
+Embora apenas o campo de senha tenha sido deixado vazio, a aplicação exibe uma mensagem genérica informando que ambos os campos são obrigatórios.
 
 ---
 
