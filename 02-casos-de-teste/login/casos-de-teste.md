@@ -102,7 +102,13 @@ O sistema deve impedir o login e apresentar a mensagem:
 
 `Formato de email inválido. Use: nome@dominio.com`
 
-**Status:** Não executado
+**Status:** Não executado**Resultado:** PASSOU
+
+**Resultado obtido:**
+
+O sistema apresentou a mensagem:
+
+`Formato de email inválido. Use: nome@dominio.com`
 
 ---
 
@@ -347,11 +353,11 @@ O sistema deve tratar os espaços conforme a regra definida para o campo de e-ma
 | ID | Cenário | Tipo | Status |
 |---|---|---|---|
 | CT-LOGIN-001 | Login com credenciais válidas | Positivo | ✅ PASSOU |
-| CT-LOGIN-002 | Login com senha inválida | Negativo | ❌ FALHOU — BUG-001 |
-| CT-LOGIN-003 | Login com e-mail inválido | Negativo | Não executado |
-| CT-LOGIN-004 | Login sem e-mail | Negativo | Não executado |
-| CT-LOGIN-005 | Login sem senha | Negativo | Não executado |
-| CT-LOGIN-006 | Login sem campos | Negativo | Não executado |
+| CT-LOGIN-002 | Login com senha inválida | Negativo | ❌ FALHOU — BUG-001  |
+| CT-LOGIN-003 | Login com e-mail inválido | Negativo | ✅ PASSOU  |
+| CT-LOGIN-004 | Login sem e-mail | Negativo | ⚠️ PASSOU* |
+| CT-LOGIN-005 | Login sem senha | Negativo | ⚠️ PASSOU* |
+| CT-LOGIN-006 | Login sem campos | Negativo | ✅ PASSOU |
 | CT-LOGIN-007 | Senha abaixo do mínimo | Limite | Não executado |
 | CT-LOGIN-008 | Usuário não cadastrado | Negativo | Não executado |
 | CT-LOGIN-009 | Domínio de e-mail inválido | Negativo | Não executado |
