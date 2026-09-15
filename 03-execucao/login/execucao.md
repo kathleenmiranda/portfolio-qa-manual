@@ -46,7 +46,7 @@ Registrar os resultados obtidos durante a execução dos casos de teste da funci
 
 **Comportamento observado:**
 
-O sistema autenticou o usuário utilizando as credenciais válidas e permitiu o acesso à aplicação.
+O sistema autenticou o usuário com credenciais válidas e permitiu o acesso à aplicação.
 
 ---
 
@@ -94,7 +94,7 @@ O sistema impediu o login e apresentou:
 
 **Observação:**
 
-Embora apenas o campo de e-mail tenha sido deixado vazio, a aplicação apresentou uma mensagem genérica indicando que ambos os campos são obrigatórios.
+Embora apenas o campo de e-mail tenha sido deixado vazio, a aplicação exibiu uma mensagem genérica informando que ambos os campos são obrigatórios.
 
 ---
 
@@ -156,7 +156,7 @@ O sistema impediu o login e apresentou:
 
 **Comportamento observado:**
 
-O sistema identificou o formato inválido do e-mail e impediu o login.
+O sistema identificou um formato de e-mail inválido e impediu o login.
 
 ---
 
@@ -186,11 +186,11 @@ O sistema apresentou:
 
 **Observação:**
 
-O usuário cadastrado com o endereço `admin@qatest.com` não foi reconhecido quando o endereço foi informado utilizando letras maiúsculas.
+O usuário cadastrado com o endereço `admin@qatest.com` não foi reconhecido quando o endereço foi informado em letras maiúsculas.
 
 **Classificação:**
 
-Cenário exploratório. Necessário avaliar a regra esperada para o tratamento de maiúsculas e minúsculas no endereço de e-mail.
+Cenário exploratório. É necessário avaliar a regra esperada para o tratamento de maiúsculas e minúsculas no endereço de e-mail.
 
 ---
 
@@ -228,20 +228,33 @@ Durante a execução dos testes foi identificado o seguinte defeito:
 
 ---
 
-## 6. Observações gerais
+## 6. Achados exploratórios
 
-- Os casos de teste foram executados considerando o comportamento observado na aplicação.
-- Os cenários exploratórios CT-LOGIN-011 e CT-LOGIN-012 apresentaram comportamento diferente do esperado para a análise realizada.
+Durante a execução dos cenários exploratórios foram identificados dois comportamentos que merecem avaliação:
+
+| Caso | Comportamento observado | Situação |
+|---|---|---|
+| CT-LOGIN-011 | E-mail em letras maiúsculas não foi reconhecido | Necessita validação da regra |
+| CT-LOGIN-012 | E-mail com espaços antes/depois não foi reconhecido | Necessita validação da regra |
+
+Os comportamentos acima não foram classificados como defeitos, pois não foi identificada nenhuma regra de negócio ou requisito que definisse o comportamento esperado nesses cenários.
+
+---
+
+## 7. Observações gerais
+
+- Os casos de teste foram executados com base no comportamento observado na aplicação.
+- Os cenários exploratórios CT-LOGIN-011 e CT-LOGIN-012 apresentaram comportamento diferente do esperado na análise realizada.
 - Os cenários exploratórios não foram classificados automaticamente como defeitos, sendo necessária a confirmação da regra de negócio.
 - As evidências visuais serão armazenadas no diretório `04-evidencias/login/`.
 - O BUG-001 deverá ser retestado após a disponibilização de uma correção.
 
 ---
 
-## 7. Conclusão
+## 8. Conclusão
 
 A execução dos testes de Login demonstrou que os principais fluxos de autenticação e validação estão funcionando conforme os cenários definidos.
 
-Foi identificado um defeito relacionado à mensagem apresentada quando um usuário cadastrado informa uma senha inválida.
+Foi identificado um defeito na mensagem exibida quando um usuário cadastrado informa uma senha inválida.
 
-Também foram identificados dois comportamentos durante testes exploratórios relacionados ao tratamento de letras maiúsculas e espaços no endereço de e-mail, que deverão ser avaliados de acordo com as regras esperadas para a aplicação.
+Também foram identificados dois comportamentos, durante testes exploratórios, relacionados ao tratamento de letras maiúsculas e de espaços no endereço de e-mail, que deverão ser avaliados conforme as regras esperadas para a aplicação.
