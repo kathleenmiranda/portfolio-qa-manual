@@ -47,6 +47,27 @@ Os testes deste portfólio são realizados em uma aplicação web utilizada para
 
 ---
 
+## 🔗 Projetos relacionados
+
+Este portfólio faz parte de uma série de projetos voltados à prática de Quality Assurance.
+
+### 🤖 Testes automatizados
+
+Projeto desenvolvido com Selenium para automação de testes da mesma aplicação utilizada neste portfólio.
+
+O projeto contempla automação de fluxos de:
+
+- Login;
+- Cadastro de usuários;
+- Produtos;
+- Categorias;
+- Fornecedores.
+
+Também são utilizados recursos como Page Object, captura de screenshots e geração de relatórios de execução.
+
+👉 [Acessar projeto de testes automatizados](https://github.com/kathleenmiranda/selenium-testing)
+
+---
 ## 🔎 Processo de testes
 
 O projeto segue um fluxo estruturado para demonstrar diferentes etapas do processo de QA:
