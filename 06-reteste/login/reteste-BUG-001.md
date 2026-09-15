@@ -48,7 +48,7 @@ O comportamento observado está de acordo com o resultado esperado para o cenár
 
 ## 7. Evidência
 
-![Evidência do reteste do BUG-001](../../04-evidencias/login/CT-LOGIN-002-senha-invalida.png)
+![Evidência do reteste do BUG-001](../../04-evidencias/login/CT-LOGIN-002-senha-invalida-reteste.png)
 
 ## 8. Conclusão
 
