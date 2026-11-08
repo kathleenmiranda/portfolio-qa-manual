@@ -14,7 +14,7 @@ Validar a funcionalidade de criação de conta, verificando o comportamento da a
 
 ## 3. Casos de teste
 
-### CT-CAD-001 — Cadastro com dados válidos
+### CT-CAD-001 | Cadastro com dados válidos
 
 **Objetivo:** Validar a criação de uma nova conta exibindo dados válidos.
 
@@ -41,7 +41,7 @@ A conta deve ser criada com sucesso e a aplicação deve apresentar o comportame
 
 ---
 
-### CT-CAD-002 — Cadastro sem informar o nome
+### CT-CAD-002 | Cadastro sem informar o nome
 
 **Objetivo:** Validar a obrigatoriedade do campo "Nome Completo".
 
@@ -64,7 +64,7 @@ O cadastro não deve ser realizado, e o sistema deve exibir uma indicação de q
 
 ---
 
-### CT-CAD-003 — Cadastro sem informar o e-mail
+### CT-CAD-003 | Cadastro sem informar o e-mail
 
 **Objetivo:** Validar a obrigatoriedade do campo "e-mail".
 
@@ -88,7 +88,7 @@ O cadastro não deve ser realizado, e o sistema deve exibir uma indicação de q
 
 ---
 
-### CT-CAD-004 — Cadastro sem informar a senha
+### CT-CAD-004 | Cadastro sem informar a senha
 
 **Objetivo:** Validar a obrigatoriedade do campo "Senha".
 
@@ -111,7 +111,7 @@ O cadastro não deve ser realizado, e o sistema deve exibir uma indicação de q
 
 ---
 
-### CT-CAD-005 — Cadastro sem confirmar a senha
+### CT-CAD-005 | Cadastro sem confirmar a senha
 
 **Objetivo:** Validar a obrigatoriedade do campo "Confirme a Senha".
 
@@ -135,7 +135,7 @@ O cadastro não deve ser realizado, e o sistema deve exibir uma indicação de q
 
 ---
 
-### CT-CAD-006 — Cadastro com todos os campos vazios
+### CT-CAD-006 | Cadastro com todos os campos vazios
 
 **Objetivo:** Validar o comportamento da aplicação quando nenhum campo é preenchido.
 
@@ -151,7 +151,7 @@ O cadastro não deve ser realizado e o sistema deve apresentar as validações c
 
 ---
 
-### CT-CAD-007 — E-mail com formato inválido
+### CT-CAD-007 | E-mail com formato inválido
 
 **Objetivo:** Validar a validação do formato do endereço de e-mail.
 
@@ -170,7 +170,7 @@ O cadastro não deve ser realizado, e o sistema deve exibir uma mensagem ou indi
 
 ---
 
-### CT-CAD-008 — Senha com menos de 8 caracteres
+### CT-CAD-008 | Senha com menos de 8 caracteres
 
 **Objetivo:** Validar o limite mínimo de caracteres da senha.
 
@@ -190,7 +190,7 @@ O cadastro não deve ser realizado, pois a senha deve ter no mínimo 8 caractere
 
 ---
 
-### CT-CAD-009 — Senha sem letra minúscula
+### CT-CAD-009 | Senha sem letra minúscula
 
 **Objetivo:** Validar o requisito de pelo menos uma letra minúscula.
 
@@ -210,7 +210,7 @@ O cadastro não deve ser realizado, pois a senha deve conter pelo menos uma letr
 
 ---
 
-### CT-CAD-010 — Senha sem letra maiúscula
+### CT-CAD-010 | Senha sem letra maiúscula
 
 **Objetivo:** Validar o requisito de pelo menos uma letra maiúscula.
 
@@ -230,7 +230,7 @@ O cadastro não deve ser realizado, pois a senha deve conter pelo menos uma letr
 
 ---
 
-### CT-CAD-011 — Senha sem número
+### CT-CAD-011 | Senha sem número
 
 **Objetivo:** Validar o requisito de pelo menos um número.
 
@@ -250,7 +250,7 @@ O cadastro não deve ser realizado, pois a senha deve conter pelo menos um dígi
 
 ---
 
-### CT-CAD-012 — Senha sem caractere especial
+### CT-CAD-012 | Senha sem caractere especial
 
 **Objetivo:** Validar o requisito de pelo menos um caractere especial.
 
@@ -270,7 +270,7 @@ O cadastro não deve ser realizado, pois a senha deve conter pelo menos um carac
 
 ---
 
-### CT-CAD-013 — Senha e confirmação diferentes
+### CT-CAD-013 | Senha e confirmação diferentes
 
 **Objetivo:** Validar se o sistema impede o cadastro quando a senha e a confirmação são diferentes.
 
@@ -291,7 +291,7 @@ O cadastro não deve ser realizado e o sistema deve informar que as senhas não 
 
 ---
 
-### CT-CAD-014 — Cadastro com e-mail já existente
+### CT-CAD-014 | Cadastro com e-mail já existente
 
 **Objetivo:** Validar o comportamento da aplicação ao tentar cadastrar um e-mail que já possui uma conta.
 
@@ -310,7 +310,7 @@ O cadastro não deve ser realizado e o sistema deve informar que o e-mail já es
 
 ---
 
-### CT-CAD-015 — Navegação pelo botão Voltar
+### CT-CAD-015 | Navegação pelo botão Voltar
 
 **Objetivo:** Validar a navegação da tela Criar Conta para a tela anterior.
 
@@ -325,7 +325,7 @@ O usuário deve retornar à tela anterior.
 
 ---
 
-### CT-CAD-016 — Navegação para Login pela opção "faça login na sua conta existente"
+### CT-CAD-016 | Navegação para Login pela opção "faça login na sua conta existente"
 
 **Objetivo:** Validar a navegação da tela Criar Conta para a tela de Login por meio da opção disponível para usuários que já possuem uma conta.
 
