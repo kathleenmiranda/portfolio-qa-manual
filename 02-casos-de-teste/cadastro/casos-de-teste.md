@@ -1,4 +1,4 @@
-# 👤 Casos de Teste — Cadastro
+# 👤 Casos de Teste - Cadastro
 
 ## 1. Objetivo
 
