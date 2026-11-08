@@ -1,4 +1,4 @@
-# 👤 Análise de Requisitos — Cadastro
+# 👤 Análise de Requisitos - Cadastro
 
 ## 1. Objetivo
 
